@@ -15,10 +15,15 @@ class Zoo
         end
     end
     def animal_species
+        unique_species =[]
         animals_in_zoo=self.animals
-        animals_in_zoo.uniq do |animalObject|
+        animal_obj =animals_in_zoo.uniq do |animalObject|
             animalObject.species
         end
+        animal_obj.each do | objects |
+            unique_species << objects.species
+        end
+        unique_species
     end
     def find_by_species(species)
         animals_in_zoo=self.animals
