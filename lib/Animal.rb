@@ -5,7 +5,6 @@ class Animal
     def initialize (species,weight,nickname)
         @species = species
         @weight = weight
-        @zoo=nil
         @nickname = nickname
         
         @@all << self
