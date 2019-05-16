@@ -1,10 +1,10 @@
-require_relative "lib/Animal.rb"
-require_relative "lib/Zoo.rb"
 require 'pry'
+require './lib/Zoo.rb'
+require './lib/Animal.rb'
 
-
-#Test your code here
-
-
+H_zoo = Zoo.new("Houston Zoo", "Houston")
+Other_zoo = Zoo.new("Dallas Zoo", "Dallas")
+Animal.new(120, "Zebra", "Stripey", H_zoo)
+Animal.new(140, "Buffalo", "Horney", H_zoo)
+Animal.new(190, "Buffalo", "Wooly", Other_zoo)
 binding.pry
-puts "done"
