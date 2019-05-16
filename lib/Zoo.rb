@@ -45,9 +45,10 @@ class Zoo
     end
 
     def animal_species
-        Animal.all.map do |animal|
+        unique_species = animals.map do |animal|
             animal.species
         end
+        unique_species.uniq
     end
 
     def find_by_species(species)
